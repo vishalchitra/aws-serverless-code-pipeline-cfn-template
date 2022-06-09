@@ -7,12 +7,12 @@ phases:
       #- npm install --silent --progress=false -g npm
       
       ## Dependencies
-      - npm uninstall -g npm
-      - npm i -g npm@next
-      - npm install --silent --progress=false
+      #- npm uninstall -g npm
+      #- npm i -g npm@next
+      - npm install
       - npm --version
-      - npm install --silent --progress=false -g serverless
-      - npm install --silent --save–dev serverless-stack-output
+      #- npm install --silent --progress=false -g serverless
+      #- npm install --silent --save–dev serverless-stack-output
       
   build:
     commands:
@@ -20,7 +20,7 @@ phases:
       #- serverless deploy --stage test -v
       - mkdir artifacts
       - mkdir artifacts/stg
-      - serverless package --package artifacts/dev --stage dev -v
+      #- serverless package --package artifacts/dev --stage dev -v
 
   post_build:
     commands:
