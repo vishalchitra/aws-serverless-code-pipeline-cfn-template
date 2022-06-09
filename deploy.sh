@@ -9,4 +9,4 @@ npm install
 
 echo "Deploying to $env"
 echo "_______________________________"
-serverless deploy --stage $env --package $CODEBUILD_SRC_DIR/artifacts/$env -v
+npm deploy --stage $env --package $CODEBUILD_SRC_DIR/artifacts/$env -v
